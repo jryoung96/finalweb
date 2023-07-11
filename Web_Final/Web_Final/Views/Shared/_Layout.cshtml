@@ -39,9 +39,11 @@
                                     <h5 class="mb-0 text-white nav-user-name">로그인 안하면 로그인 해씅면 유저</h5>
                                 </div>
                                 @*로그인 x*@
+                                @if (true) { }
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>비밀번호 설정</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>로그아웃</a>
                                 @*로그인 ㅇ*@
+                                @if(false){}
 
                             </div>
                         </li>
@@ -66,6 +68,7 @@
                             </li>
                             <li class="nav-item ">
                                 <!-- 대쉬보드 -->
+                                @if(true){} @*관리직급별 메뉴 다르게*@
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>사원관리<span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">

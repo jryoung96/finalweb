@@ -432,4 +432,8 @@
     <None Include="wwwroot\assets\vendor\vector-map\jqvmap.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
