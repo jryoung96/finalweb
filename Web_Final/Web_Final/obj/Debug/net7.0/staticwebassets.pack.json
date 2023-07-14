@@ -1761,6 +1761,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\wwwroot\\js\\check.js",
+      "PackagePath": "staticwebassets\\js\\check.js"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

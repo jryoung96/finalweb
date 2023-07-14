@@ -72,6 +72,14 @@ namespace Web_Final.Controllers
         {
             return View();
         }
+        //존재하는 사원코드인지 검사
+        [HttpGet]
+        public IActionResult Check(int p_code)
+        {
+            var user = factoryRepository.FindId(p_code);
+            if (user == null) return Json("unavailable");
+            else return Json("available");
+        }
         [HttpPost]
         [ActionName("UpdateEmp")]
         public IActionResult Update(string p_name, string p_department)

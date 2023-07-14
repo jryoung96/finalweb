@@ -17,6 +17,7 @@ namespace Web_Final.Repositories
         Task<IEnumerable<T1WareHouse>> Total_List(); //재고 현황 (창고), 생산팀만 확인가능
         Task<T1Account> FindId(int p_code); //사원번호 입력해서 찾기
         
+        
 
     }
 }

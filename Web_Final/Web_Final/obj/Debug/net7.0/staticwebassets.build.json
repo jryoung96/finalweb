@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uGyKD7DAcOO5QkMaXHw+u5GFHVUdcMOv9JMiy4eTcoc=",
+  "Hash": "st43ybwRw8pINbKTd1Sv9q6f+MHkDvuA125rvAkY3Gg=",
   "Source": "Web_Final",
   "BasePath": "_content/Web_Final",
   "Mode": "Default",
@@ -7512,6 +7512,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\wwwroot\\js\\check.js",
+      "SourceId": "Web_Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\wwwroot\\",
+      "BasePath": "_content/Web_Final",
+      "RelativePath": "js/check.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\check.js"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\wwwroot\\js\\site.js",
