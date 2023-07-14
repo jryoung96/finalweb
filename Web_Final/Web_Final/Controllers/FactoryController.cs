@@ -73,18 +73,19 @@ namespace Web_Final.Controllers
             return View();
         }
         //존재하는 사원코드인지 검사
-        [HttpGet]
-        public IActionResult Check(int p_code)
+        public async Task<IActionResult> Check(string p_code) //진짜 id값을 입력받아야 돼
         {
-            var user = factoryRepository.FindId(p_code);
+            var user = await factoryRepository.FindId(p_code);
             if (user == null) return Json("unavailable");
-            else return Json("available");
+            else 
+                return Json("available");
         }
         [HttpPost]
         [ActionName("UpdateEmp")]
-        public IActionResult Update(string p_name, string p_department)
+        public async Task<IActionResult> Update(string p_code, string p_department)
         {
-            return null;
+            var user = await factoryRepository.Update(p_code, p_department);
+            return View();
         }
         //창고자재 목록 (구매팀)
         public IActionResult StockList()

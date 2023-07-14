@@ -20,7 +20,7 @@ public partial class StockDbContext : DbContext
     {
     }
 
-    public virtual DbSet<T1Account> T1Acounts { get; set; }
+    public virtual DbSet<T1Account> T1Accounts { get; set; }
 
     public virtual DbSet<T1CreateLot> T1CreateLots { get; set; }
 
