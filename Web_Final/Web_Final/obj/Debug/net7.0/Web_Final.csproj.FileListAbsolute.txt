@@ -29,3 +29,14 @@ C:\Users\sec\Desktop\final_project\Web_Final\Web_Final\obj\Debug\net7.0\refint\W
 C:\Users\sec\Desktop\final_project\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.pdb
 C:\Users\sec\Desktop\final_project\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.genruntimeconfig.cache
 C:\Users\sec\Desktop\final_project\Web_Final\Web_Final\obj\Debug\net7.0\ref\Web_Final.dll
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.dll
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\refint\Web_Final.dll
+C:\Users\Administrator\Desktop\final (2)\Ifactory_web\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.pdb

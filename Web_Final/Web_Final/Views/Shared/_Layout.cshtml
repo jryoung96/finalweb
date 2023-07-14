@@ -1,5 +1,13 @@
-﻿@*모델 지정*@
-
+﻿@*부서코드 001:경영지원, 002:구매팀, 003:생산팀*@
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@model Web_Final.Models.Account.T1Account;
+@{
+    //세션에서 가져올 값 : 이름,부서코드(departmentCode),권한,uid
+    string? name = HttpContextAccessor.HttpContext.Session.GetString("username"); //이름
+    string? departmentCode = HttpContextAccessor.HttpContext.Session.GetString("department"); //부서
+    int? authority = HttpContextAccessor.HttpContext.Session.GetInt32("authority"); // 권한
+    int? uid = HttpContextAccessor.HttpContext.Session.GetInt32("userid"); // uid (수정 및 삭제)
+}
 <!doctype html>
 <html lang="en">
 
@@ -17,12 +25,13 @@
     <link rel="stylesheet" href="~/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="~/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>환영합니다</title>
+    <title>안녕하세요</title>
 </head>
 
 <body>
     <!-- 상단바 -->
     <div class="dashboard-main-wrapper">
+
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="#">Concept</a>
@@ -32,26 +41,23 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
                         <!-- 로그인 했을 때 사용자 정보 -->
+               
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/User.png" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/assets/images/User.png" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">로그인 안하면 로그인 해씅면 유저</h5>
+                                    <h5 class="mb-0 text-white nav-user-name">안녕하세요! @(name)님</h5>
                                 </div>
-                                @*로그인 x*@
-                                @if (true) { }
-                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>비밀번호 설정</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>로그아웃</a>
-                                @*로그인 ㅇ*@
-                                @if(false){}
 
+                                <a class="dropdown-item" href="UpdatePw"><i class="fas fa-cog mr-2"></i>비밀번호 설정</a>
+                                <a class="dropdown-item" href="Logout"><i class="fas fa-power-off mr-2"></i>로그아웃</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-
+    
         <!-- 왼쪽 메뉴 -->
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
@@ -68,29 +74,82 @@
                             </li>
                             <li class="nav-item ">
                                 <!-- 대쉬보드 -->
-                                @if(true){} @*관리직급별 메뉴 다르게*@
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>사원관리<span class="badge badge-success">6</span></a>
-                                <div id="submenu-1" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">사원ID생성</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">사원정보 수정</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">사원정보 조회</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                @*직급별 다른메뉴*@
+                                @if (departmentCode == "001") //경영지원
+                                {
+                                    <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>사원관리<span class="badge badge-success">6</span></a>
+                                    <div id="submenu-1" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            @if(authority == 0)
+                                            {
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="Create">사원ID생성</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="UpdateEmp">사원정보 수정</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="List">사원정보 조회</a>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="List">사원정보 조회</a>
+                                                </li>
+                                            }
+
+                                        </ul>
+                                    </div>
+                                }
+                                @if (departmentCode == "002") //구매팀
+                                {
+                                    <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>얜 뭐하냐..<span class="badge badge-success">6</span></a>
+                                    <div id="submenu-1" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">메뉴1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">메뉴2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">메뉴3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                }
+                                @if (departmentCode == "003") //생산팀
+                                {
+                                    <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>재고관리<span class="badge badge-success">6</span></a>
+                                    <div id="submenu-1" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">전체 재고조회</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">입고내역</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">출고내역</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                }
+
+                               
                             </li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
+        <div class="dashboard-wrapper">
+            <div class="container-fluid dashboard-content">
+                @RenderBody()
 
-        @RenderBody()
+            </div>
+        </div>
 
     </div>
 
@@ -113,8 +172,25 @@
     <script src="~/assets/vendor/charts/c3charts/c3.min.js"></script>
     <script src="~/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="~/assets/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="~/assets/libs/js/dashboard-ecommerce.js"></script>
+
+    <!-- Optional JavaScript -->
+    <script src="~/assets/libs/js/main-js.js"></script>
+    <script src="~/assets/vendor/datatables/js/db_table.js"></script>
+    <script src="~/assets/vendor/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="~/assets/vendor/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/assets/vendor/datatables/js/data-table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
 
 </body>
-
 </html>
+
+

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
     <None Include="wwwroot\assets\images\avatar-1.jpg" />
     <None Include="wwwroot\assets\images\avatar-2.jpg" />
     <None Include="wwwroot\assets\images\avatar-3.jpg" />
@@ -430,10 +437,6 @@
     <None Include="wwwroot\assets\vendor\timeline\img\cd-icon-picture.svg" />
     <None Include="wwwroot\assets\vendor\timeline\js\main.js" />
     <None Include="wwwroot\assets\vendor\vector-map\jqvmap.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
