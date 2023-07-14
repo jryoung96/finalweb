@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Web_Final.Models.Data;
+using Web_Final.Data;
 using Web_Final.Repositories;
 
 namespace Web_Final.Controllers

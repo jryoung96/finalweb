@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\final (2)\\Ifactory_web\\finalweb\\Web_Final\\Web_Final\\Web_Final.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\Web_Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\final (2)\\Ifactory_web\\finalweb\\Web_Final\\Web_Final\\Web_Final.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\Web_Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\final (2)\\Ifactory_web\\finalweb\\Web_Final\\Web_Final\\Web_Final.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\Web_Final.csproj",
         "projectName": "Web_Final",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\final (2)\\Ifactory_web\\finalweb\\Web_Final\\Web_Final\\Web_Final.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\Web_Final.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\final (2)\\Ifactory_web\\finalweb\\Web_Final\\Web_Final\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\work\\final\\ifactory_web\\Web_Final\\Web_Final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,22 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
