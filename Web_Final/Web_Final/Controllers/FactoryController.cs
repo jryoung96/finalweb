@@ -68,9 +68,22 @@ namespace Web_Final.Controllers
             return View();
         }
         //사원정보 수정(경영)
-        public IActionResult UpdateEmp()
+        public  IActionResult UpdateEmp()
         {
             return View();
+        }
+        [HttpPost]
+        [ActionName("UpdateEmp")]
+        public async Task<IActionResult> Update(string p_code, string p_department)
+        {
+            var user = await factoryRepository.Update(p_code, p_department);
+            return View("Index");
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPw(string p_code) //비밀번호 초기화
+        {
+           var user = await factoryRepository.ResetPw(p_code);
+            return View("Index");
         }
         //존재하는 사원코드인지 검사
         public async Task<IActionResult> Check(string p_code) //진짜 id값을 입력받아야 돼
@@ -80,13 +93,10 @@ namespace Web_Final.Controllers
             else 
                 return Json("available");
         }
-        [HttpPost]
-        [ActionName("UpdateEmp")]
-        public async Task<IActionResult> Update(string p_code, string p_department)
-        {
-            var user = await factoryRepository.Update(p_code, p_department);
-            return View();
-        }
+
+        //==========================================================================
+        //테이블 조회 및 차트
+
         //창고자재 목록 (구매팀)
         public IActionResult StockList()
         {

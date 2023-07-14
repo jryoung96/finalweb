@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 using Web_Final.Data;
 using Web_Final.Models.Account;
 using Web_Final.Models.WareHouse;
@@ -65,11 +66,12 @@ namespace Web_Final.Repositories
             return s;
         }
 
-        public async Task<T1Account> ResetPw(int id) // 비밀번호 초기화(경영지원부)
+        public async Task<T1Account> ResetPw(string p_code) // 비밀번호 초기화(경영지원부)
         {
-            var e = await db.T1Accounts.FindAsync(id);
-            if(e == null) return null;
-            return null;
+            T1Account user = await db.T1Accounts.FirstOrDefaultAsync(x => x.UserId == p_code.Trim());
+            if (p_code == null) return null;
+            user.PassWord = "0000";
+            return user;
         }
 
         public async Task<IEnumerable<T1WareHouse>> Total_List() // 창고 총 현황

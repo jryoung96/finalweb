@@ -25,4 +25,33 @@ $("#check_code").on("click", function () {
 });
 
 //
-$("#")
+$("#edit").on("click", function () {
+    alert("사원정보 수정이 완료되었습니다.");
+})
+
+
+$("#reset").on("click", function () {
+    var input = $("#code").val();
+    var url = "/Factory/ResetPw";
+    var res = confirm("비밀번호가 0000으로 초기화 됩니다. 정말로 진행하시겠습니까?");
+    if (res) {
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"}
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("요청실패");
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                alert("비밀번호 초기화가 완료되었습니다.");
+            })
+            .catch(function (error) {
+                alert("잠시 후 다시 시도해 주세요");
+            });
+    }
+});
+
+
