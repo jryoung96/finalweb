@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Web_Final
+build_property.RootNamespace = Web_Final
+build_property.ProjectDir = C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_Final\Web_Final\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_Final\Web_Final
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/InBoundList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxJbkJvdW5kTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/InBound_P.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxJbkJvdW5kX1AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/OutBoundList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxPdXRCb3VuZExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/OutBound_P.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxPdXRCb3VuZF9QLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/StockList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxTdG9ja0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/Total_Chart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxUb3RhbF9DaGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/UpdateEmp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxVcGRhdGVFbXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/UpdatePw.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxVcGRhdGVQdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-63efve3pjp
