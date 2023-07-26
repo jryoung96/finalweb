@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections;
 using Web_Final.Data;
+using Web_Final.Models.Account;
 using Web_Final.Repositories;
 
 namespace Web_Final.Controllers
@@ -62,16 +64,16 @@ namespace Web_Final.Controllers
             var new_user = await factoryRepository.Create(p_name, p_department, p_position, p_id, p_pw);
             return View("Index");
         }
-        //사원 조회(경영)
-        public IActionResult List()
-        {
-            return View();
-        }
-        //사원정보 수정(경영)
+
+
+
+        //사원정보 수정페이지
         public  IActionResult UpdateEmp()
         {
             return View();
         }
+
+        //사원정보 수정 메소드
         [HttpPost]
         [ActionName("UpdateEmp")]
         public async Task<IActionResult> Update(string p_code, string p_department)
@@ -79,12 +81,22 @@ namespace Web_Final.Controllers
             var user = await factoryRepository.Update(p_code, p_department);
             return View("Index");
         }
+
+        //비밀번호 0000초기화
         [HttpPost]
-        public async Task<IActionResult> ResetPw(string p_code) //비밀번호 초기화
+        public async Task<IActionResult> ResetPw(string p_code, [FromBody]string data) //비밀번호 초기화, p_code : 사원ID
         {
+           if(data == "Go")
+            {
            var user = await factoryRepository.ResetPw(p_code);
-            return View("Index");
+            return Json("Success");
+            }
+            else
+            {
+                return Json("Fail");
+            }
         }
+
         //존재하는 사원코드인지 검사
         public async Task<IActionResult> Check(string p_code) //진짜 id값을 입력받아야 돼
         {
@@ -94,31 +106,38 @@ namespace Web_Final.Controllers
                 return Json("available");
         }
 
-        //==========================================================================
-        //테이블 조회 및 차트
+		//==========================================================================
+		//테이블 조회 및 차트
 
-        //창고자재 목록 (구매팀)
-        public IActionResult StockList()
+		//사원 조회(경영)
+		    public async Task<IActionResult> EmployeesList()
+		    {
+			    var list = await factoryRepository.List(); //사원목록
+                var result = list.ToList();
+			    return View(result);
+		    }
+		//창고자재 목록 (구매팀)
+		public async Task<IActionResult> StockList()
         {
             return View();
         }
         //입고내역 (구매팀)
-        public IActionResult InBoundList()
+        public async Task<IActionResult> InBoundList()
         {
             return View();
         }
         //불출내역 (구매팀 >> 생산팀)
-        public IActionResult OutBoundList()
+        public async Task<IActionResult> OutBoundList()
         {
             return View();
         }
         //입고내역(생산부)
-        public IActionResult InBound_P()
+        public async Task<IActionResult> InBound_P()
         {
             return View();
         }
         //출고내역 (생산)
-        public IActionResult OutBound_P()
+        public async Task<IActionResult> OutBound_P()
         {
             return View();
         }

@@ -93,5 +93,11 @@ namespace Web_Final.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public async Task<IEnumerable<T1Account>> List() //총사원 현황
+        {
+            var employees = await db.T1Accounts.ToListAsync();
+            return employees;
+        }
     }
 }
