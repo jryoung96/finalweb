@@ -11,12 +11,9 @@ namespace Web_Final.Controllers
     {
         //repo
         private readonly IFactoryRepository factoryRepository;
-        //DbContext
-        private readonly StockDbContext db;
         //컨트롤러 생성자
-        public FactoryController(IFactoryRepository _factoryRepository, StockDbContext _db)
+        public FactoryController(IFactoryRepository _factoryRepository)
         {
-            db = _db;
             factoryRepository = _factoryRepository;
         }
         //로그인
@@ -36,7 +33,7 @@ namespace Web_Final.Controllers
                 HttpContext.Session.SetInt32("authority", user.Authority); //경영지원부 아이디로 로그인 할 경우, 아이디생성 권한(0일경우 가능)
                 HttpContext.Session.SetString("username", user.Name); // 로그인한 사원정보 볼 수 있게
             }
-            return View("Index",user);
+            return View("Index");
         }
         //로그아웃
         public IActionResult Logout()

@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Web_Final",
+    "\\Web_Final\\Web_Final",
+    "\\Web_Final\\Web_Final\\wwwroot",
+    "\\Web_Final\\Web_Final\\wwwroot\\js"
   ],
+  "SelectedNode": "\\Web_Final\\Web_Final\\wwwroot\\js\\script.js",
   "PreviewInSolutionExplorer": false
 }
