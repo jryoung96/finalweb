@@ -1,106 +1,59 @@
 ﻿@*
-	입고내역(구매)
+	입고내역
+	pk(입고번호) 부품명 수량 거래처 입고날짜 담당자
+
 *@
+@model List<Web_Final.Models.WareHouse.T1InBound>
 @{
+	int row_count = 1;
 }
-<h2>자재목록</h2>
-<br />
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	<div class="card">
-		<div class="card-header">
-			<h5 class="mb-0">자재입고 내역</h5>
-			<p>창고에서 부족했던 자재들이 구매팀에서 입고됐었던 내역을 보여줍니다.</p>
-		</div>
+		<h5 class="card-header">입고내역</h5>
 		<div class="card-body">
 			<div class="table-responsive">
-				<div id="example3_wrapper" class="dataTables_wrapper dt-bootstrap4">
+				<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
 					<div class="row">
 						<div class="col-sm-12 col-md-6">
-							<div class="dataTables_length" id="example3_length">
-								<label>
-									<select name="list_size" aria-controls="employee_list" class="custom-select custom-select-sm form-control form-control-sm">
-										<option value="10">10</option>
-										<option value="20">20</option>
-										<option value="30">30</option>
-									</select> 개씩 나열
-								</label>
-							</div>
 						</div>
-						<div class="col-sm-12 col-md-6"><div id="example3_filter" class="dataTables_filter"><label>검색어:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="employee_list"></label></div></div>
-					</div><div class="row">
-						<div class="col-sm-12">
-							<table id="stock_list" class="table table-striped table-bordered dataTable" style="width:100%" role="grid" aria-describedby="example3_info">
-								<thead>
-									<tr role="row">
-										<th class="sorting" tabindex="0" aria-controls="inbound_list" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 317.531px;">번호</th>
-										<th class="sorting_asc" tabindex="0" aria-controls="inbound_list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 190.625px;">부품명</th>
-										<th class="sorting" tabindex="0" aria-controls="inbound_list" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 137.438px;">부품번호</th>
-										<th class="sorting" tabindex="0" aria-controls="inbound_list" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 69.0469px;">부품수량</th>
-										<th class="sorting" tabindex="0" aria-controls="inbound_list" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 190.625px;">날짜</th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<tr role="row" class="even">
-										<td class="sorting_1">1</td>
-										<td>부품1</td>
-										<td>S01</td>
-										<td>10</td>
-										<td>2020/03/01</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="col-sm-12 col-md-6">
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12 col-md-5">
-							<div class="dataTables_info" id="example3_info" role="status" aria-live="polite">
-								Showing 1 to 10 of 57 entries
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-7">
-							<div class="dataTables_paginate paging_simple_numbers" id="example3_paginate">
-								<ul class="pagination">
-									<li class="paginate_button page-item previous disabled" id="example3_previous">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
-									</li>
-									<li class="paginate_button page-item active">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="1" tabindex="0" class="page-link">
-											1
-										</a>
-									</li>
-									<li class="paginate_button page-item ">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="2" tabindex="0" class="page-link">
-											2
-										</a>
-									</li>
-									<li class="paginate_button page-item ">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="3" tabindex="0" class="page-link">
-											3
-										</a>
-									</li>
-									<li class="paginate_button page-item ">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="4" tabindex="0" class="page-link">
-											4
-										</a>
-									</li>
-									<li class="paginate_button page-item ">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="5" tabindex="0" class="page-link">
-											5
-										</a>
-									</li>
-									<li class="paginate_button page-item ">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="6" tabindex="0" class="page-link">
-											6
-										</a>
-									</li>
-									<li class="paginate_button page-item next" id="example3_next">
-										<a href="#" aria-controls="inbound_list" data-dt-idx="7" tabindex="0" class="page-link">
-											Next
-										</a>
-									</li>
-								</ul>
-							</div>
+						<div class="col-sm-12">
+							<table class="table table-striped table-bordered first dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+								<thead>
+									<tr role="row">
+										<th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 63.6406px;">No</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px;">Parts Name</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px;">Amount</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 97.25px;">Client</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 25.7344px;">Date</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 25.7344px;">Manager</th>
+								</thead>
+								<tbody>
+
+
+
+									@foreach (var data in Model)
+									{
+										<tr role="row" class="@(row_count % 2 == 1 ? "odd" : "even")">
+											<td class="sorting_1">@(data.Id)</td>
+											<td class="sorting_1">@(data.Product)</td>
+											<td class="sorting_1">@(data.Amount)</td>
+											<td class="sorting_1">@(data.Vendor)</td>
+											<td class="sorting_1">@(data.RegDate)</td>
+											<td class="sorting_1">@(data.Contact)</td>
+										</tr>
+
+										row_count++;
+									}
+
+
+
+
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

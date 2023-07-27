@@ -32,16 +32,16 @@ namespace Web_Final.Repositories
             return account;
         }
 
-        public async Task<T1Account?> Delete(int id) // 계정삭제(경영지원부)
+        public async Task<T1Account?> Delete(string p_code) // 계정삭제(경영지원부)
         {
-            var e = await db.T1Accounts.FindAsync(id);
-            if (e == null) return null;
-            db.T1Accounts.Remove(e);
+            var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == p_code.Trim());
+            if (user == null) return null;
+            db.T1Accounts.Remove(user);
             await db.SaveChangesAsync();
-            return e;
+            return user;
         }
 
-        public async Task<T1Account?> FindId(string p_code) // 입력받아서 사원코드 찾기(경영지원팀)
+        public async Task<T1Account?> FindId(string p_code) // 입력받아서 사원ID 찾기(경영지원팀)
         {
             var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == p_code.Trim());
             return user;
@@ -55,7 +55,7 @@ namespace Web_Final.Repositories
 
         public async Task<T1Account?> Login(string userid, string userpw) //로그인
         {
-            var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == userid && x.PassWord == userpw);
+            var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == userid.Trim() && x.PassWord == userpw);
             if(user == null) return null;
             return user;
         }
@@ -89,9 +89,14 @@ namespace Web_Final.Repositories
             return user;
         }
 
-        public Task<T1Account> UpdatePw(int id) // 비밀번호 수정(사원이 직접)
+        public async Task<T1Account> UpdatePw(int? uid,string pw) // 비밀번호 수정(사원이 직접)
         {
-            throw new NotImplementedException();
+
+            T1Account user = await db.T1Accounts.FirstOrDefaultAsync(x => x.Id == uid);
+            if (user == null) return null;
+            user.PassWord = pw;
+            await db.SaveChangesAsync();
+            return user;
         }
 
         public async Task<IEnumerable<T1Account>> List() //총사원 현황
@@ -99,5 +104,7 @@ namespace Web_Final.Repositories
             var employees = await db.T1Accounts.ToListAsync();
             return employees;
         }
-    }
+
+
+	}
 }

@@ -3,10 +3,11 @@
 	경영 지원부 >> 사원목록 조회
 *@
 @{
-	
+	int row_count = 1; // 짝수줄 홀수 줄 마다 디자인 다름 
+	string dept = "";
 }
 
-<p>@(Model.Count)명 있음</p>
+
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 	<div class="card">
 		<h5 class="card-header">사원목록</h5>
@@ -25,52 +26,50 @@
 							<table class="table table-striped table-bordered first dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
 								<thead>
 									<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 63.6406px;">Name</th>
-										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 97.25px;">Position</th>
-										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px;">Office</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 25.7344px;">Age</th>
-										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 57.6719px;">Start date</th>
-										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 50.7188px;">Salary</th></tr>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px;">Dept</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px;">Position</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 97.25px;">Id</th>
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 25.7344px;">Hire Date</th>
 								</thead>
 								<tbody>
 
 									
+										
 										@foreach (var data in Model)
 										{
-										int row_count = 1;
 											<tr role="row" class="@(row_count % 2 == 1 ? "odd" : "even")">
 												<td class="sorting_1">@(data.Name)</td>
-												<td class="sorting_1">@(data.Position)</td>
+											<td class="sorting_1">
+												@switch (data.DepartmentCode)
+												{
+													case "001":
+														dept = "경영지원팀";
+														break;
+														case "002":
+														dept = "구매팀";
+														break;
+														case "003":
+														dept = "생산팀";
+														break;
+												}
+												@dept
+											</td>
+
+											<td class="sorting_1">@(data.Position)</td>
 												<td class="sorting_1">@(data.UserId)</td>
 												<td class="sorting_1">@(data.RegDate)</td>
 											</tr>
+												
 											row_count++;
 										}
 
 										
 
-									
-
-	@*								<tr role="row" class= "odd">
-										<td class="sorting_1">Airi Satou</td>
-										<td>Accountant</td>
-										<td>Tokyo</td>
-										<td>33</td>
-										<td>2008/11/28</td>
-										<td>$162,700</td>
-									</tr>
-									<tr role="row" class="even">
-										<td class="sorting_1">Angelica Ramos</td>
-										<td>Chief Executive Officer (CEO)</td>
-										<td>London</td>
-										<td>47</td>
-										<td>2009/10/09</td>
-										<td>$1,200,000</td>
-									</tr>
-									*@
+						
 								</tbody>
 							</table>
 						</div>
 					</div>
-					@*<div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div>*@
 				</div>
 			</div>
 		</div>

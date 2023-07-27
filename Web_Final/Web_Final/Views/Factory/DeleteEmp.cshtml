@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post" action="/Factory/DeleteEmp">
+    <input type="hidden" id="exist_id" value="false" /> @*사원코드 확인*@
+    <label for="code" style="display: flex; align-items: center;">사원코드 :</label>
+    <input type="text" id="code" name="p_code" class="form-control" placeholder="사원ID 입력" style="margin-bottom: 0;" />
+    <button id="check_code" type="button" class="btn btn-outline-primary btn-search"
+            style="height: 38px; margin-left: 5px; line-height: 38px; padding: 0 10px;">
+        검색
+    </button>
+    <br />
+    
+    <button class="btn btn-danger" id="delete">삭제하기</button>
+</form>
+<script src="~/js/script.js"></script>

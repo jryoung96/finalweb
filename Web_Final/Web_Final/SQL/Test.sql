@@ -102,4 +102,4 @@ Values
 select * from T1_InBound;
 select * from T1_OutBound;
 select * from T1_WareHouse;
-select * from T1_Acount
+select * from T1_Acount;

@@ -1,12 +1,11 @@
 ﻿@*부서코드 001:경영지원, 002:구매팀, 003:생산팀*@
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
-@model Web_Final.Models.Account.T1Account;
 @{
     //세션에서 가져올 값 : 이름,부서코드(departmentCode),권한,uid
     string? name = HttpContextAccessor.HttpContext.Session.GetString("username"); //이름
     string? departmentCode = HttpContextAccessor.HttpContext.Session.GetString("department"); //부서
     int? authority = HttpContextAccessor.HttpContext.Session.GetInt32("authority"); // 권한
-    int? uid = HttpContextAccessor.HttpContext.Session.GetInt32("userid"); // uid (수정 및 삭제)
+    int? uid = HttpContextAccessor.HttpContext.Session.GetInt32("userid"); // uid (회원정보 수정)
 }
 <!doctype html>
 <html lang="en">
@@ -94,6 +93,9 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="EmployeesList">사원정보 조회</a>
                                                 </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="DeleteEmp">사원ID 삭제</a>
+                                                </li>
                                             }
                                             else
                                             {
@@ -128,13 +130,13 @@
                                     <div id="submenu-1" class="collapse submenu" style="">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">전체 재고조회</a>
+                                                <a class="nav-link" href="StockList">전체 재고조회</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">입고내역</a>
+                                                <a class="nav-link" href="InBoundList">입고내역</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">출고내역</a>
+                                                <a class="nav-link" href="OutBoundList">출고내역</a>
                                             </li>
                                         </ul>
                                     </div>

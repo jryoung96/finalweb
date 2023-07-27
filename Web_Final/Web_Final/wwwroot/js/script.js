@@ -29,36 +29,8 @@ $("#edit").on("click", function () {
     alert("사원정보 수정이 완료되었습니다.");
 })
 
+//삭제
 
-$("#reset").on("click", function () {
-    var input = $("#code").val();
-    var url = "/Factory/ResetPw";
-    var res = confirm("비밀번호가 0000으로 초기화 됩니다. 정말로 진행하시겠습니까?");
-    var data = "Go";
-    if (res) {
-        //예
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data),
-        })
-            .then(response => response.json())
-            .then(result => { // fetch >> controller로  json 전송완료
-                if (result === "Success") {
-                    alert("완료되었습니다.");
-                } else if (result === "Fail") {
-                    alert("잠시 후 다시하세요.");
-                }
-            })
-            .catch(error => {
-                alert("서버에 문제가 발생했습니다. 잠시후 다시 해 주세요.");
-            });
-    } else {
-        //아니오
-    }
-});
 
 
 

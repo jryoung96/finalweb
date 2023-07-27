@@ -20,16 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/DeleteEmp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxEZWxldGVFbXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/EmployeesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxFbXBsb3llZXNMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/InBoundList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxJbkJvdW5kTGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/InBound_P.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxJbkJvdW5kX1AuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/Index.cshtml]
@@ -46,10 +46,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/OutBoundList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxPdXRCb3VuZExpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/OutBound_P.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdG9yeVxPdXRCb3VuZF9QLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/82107/OneDrive/바탕 화면/final/Ifactory_web/jryoung96/finalweb/Web_Final/Web_Final/Views/Factory/StockList.cshtml]
