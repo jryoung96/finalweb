@@ -3,24 +3,20 @@
 *@
 @{
 }
-<form method="post" action="/Factory/UpdateEmp">
-    <input type="hidden" id="exist_id" value="false" /> @*사원코드 확인*@
-        <label for="code" style="display: flex; align-items: center;">사원코드 :</label>
-            <input type="text" id="code" name="p_code" class="form-control" placeholder="사원코드 입력" style="margin-bottom: 0;" />
-            <button id="check_code" type="button" class="btn btn-outline-primary btn-search"
-            style="height: 38px; margin-left: 5px; line-height: 38px; padding: 0 10px;">검색</button>
+<form method="post" action="/Factory/UpdateEmp" name="update" id="update">
+        <label for="code" style="display: flex; align-items: center;">사원ID :</label>
+            <input type="text" id="code" name="p_code" class="form-control" placeholder="사원ID 입력" style="margin-bottom: 0;" />
     <br />
     <div class="form-row">
         <label for="dept">부서명 :</label>
             <select name="p_department" class="form-control" id="dept">
+                <option value="none">부서를 선택하세요</option>
                 <option value="001">경영지원팀</option>
                 <option value="002">구매팀</option>
                 <option value="003">생산팀</option>
             </select>
     </div>
     <br />
-    <button type="button" class="btn btn-outline-danger" id="reset" >초기화</button>
-    &nbsp; &nbsp; &nbsp;
-    <button class="btn btn-primary" id="edit">수정하기</button>
+    <button class="btn btn-primary" id="edit" type="button">수정하기</button>
 </form>
 <script src="~/js/script.js"></script>

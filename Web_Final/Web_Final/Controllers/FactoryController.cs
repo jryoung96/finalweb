@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 using System.Collections;
 using Web_Final.Data;
 using Web_Final.Models.Account;
@@ -15,6 +17,15 @@ namespace Web_Final.Controllers
         public FactoryController(IFactoryRepository _factoryRepository)
         {
             factoryRepository = _factoryRepository;
+        }
+        //홈화면
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult userinfo()
+        {
+            return View();
         }
         //로그인
         public IActionResult Login()
@@ -33,8 +44,10 @@ namespace Web_Final.Controllers
                 HttpContext.Session.SetInt32("authority", user.Authority); //경영지원부 아이디로 로그인 할 경우, 아이디생성 권한(0일경우 가능)
                 HttpContext.Session.SetString("username", user.Name); // 로그인한 사원정보 볼 수 있게
             }
-            return View("Index");
+                return View("userinfo", user);
         }
+
+
         //로그아웃
         public IActionResult Logout()
         {
@@ -73,36 +86,19 @@ namespace Web_Final.Controllers
         }
 
 
-
         //사원정보 수정페이지
         public  IActionResult UpdateEmp()
         {
             return View();
         }
-
-        //사원정보 수정 메소드
         [HttpPost]
         [ActionName("UpdateEmp")]
-        public async Task<IActionResult> Update(string p_code, string p_department)
+        public async Task<IActionResult> Update_test(string p_code,string p_department)
         {
-            var user = await factoryRepository.Update(p_code, p_department);
-            return View("Index");
-        }
-
-        //비밀번호 0000초기화
-        [HttpPost]
-        public async Task<IActionResult> ResetPw(string p_code, [FromBody]string data) //비밀번호 초기화, p_code : 사원ID
-        {
-           if(data == "Go")
-            {
-           var user = await factoryRepository.ResetPw(p_code);
-            return Json("Success");
-            }
-            else
-            {
-                return Json("Fail");
-            }
-        }
+			var user = await factoryRepository.Update(p_code, p_department);
+            return View("index");
+		}
+    
 
         //존재하는 사원코드인지 검사
         public async Task<IActionResult> Check(string p_code) //실제 유저가 사용하는 id값을 입력받아야 돼
@@ -112,6 +108,21 @@ namespace Web_Final.Controllers
             else 
                 return Json("available");
         }
+        
+       
+        public IActionResult Reset()
+        {
+            return View();
+        }
+        //비밀번호 0000초기화
+        [HttpPost]
+        [ActionName("Reset")]
+        public async Task<IActionResult> ResetPw(string p_code) //비밀번호 초기화, p_code : 사원ID
+        {
+          var user = await factoryRepository.ResetPw(p_code);
+            return View();
+        }
+
         //사원ID 삭제 페이지
         public IActionResult DeleteEmp()
         {
@@ -123,7 +134,7 @@ namespace Web_Final.Controllers
         public async Task<IActionResult> Delete(string p_code)
         {
             var user = await factoryRepository.Delete(p_code);
-            return View("Index");
+            return View();
         }
 
         //==========================================================================
@@ -155,9 +166,10 @@ namespace Web_Final.Controllers
 			return View(list);
         }
         //차트 (생산)
-        public IActionResult Total_Chart()
+        public async Task<IActionResult> Total_Chart()
         {
-            return View();
+            var list = await factoryRepository.ChartList();
+            return View(list);
         }
 
     }

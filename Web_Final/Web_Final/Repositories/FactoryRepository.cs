@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 using Web_Final.Data;
 using Web_Final.Models.Account;
+using Web_Final.Models.Process;
 using Web_Final.Models.WareHouse;
 
 namespace Web_Final.Repositories
@@ -15,7 +17,8 @@ namespace Web_Final.Repositories
         {
             db = stockDbContext;
         }
-        public async Task<T1Account> Create(string p_name, string p_department, string p_position, string p_id, string p_pw) //계정생성
+       //계정생성
+        public async Task<T1Account> Create(string p_name, string p_department, string p_position, string p_id, string p_pw) 
         {
             T1Account account = new()
             {
@@ -31,8 +34,8 @@ namespace Web_Final.Repositories
            await db.SaveChangesAsync();
             return account;
         }
-
-        public async Task<T1Account?> Delete(string p_code) // 계정삭제(경영지원부)
+		// 계정삭제(경영지원부)
+		public async Task<T1Account?> Delete(string p_code) 
         {
             var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == p_code.Trim());
             if (user == null) return null;
@@ -40,47 +43,48 @@ namespace Web_Final.Repositories
             await db.SaveChangesAsync();
             return user;
         }
-
-        public async Task<T1Account?> FindId(string p_code) // 입력받아서 사원ID 찾기(경영지원팀)
+		// 입력받아서 사원ID 찾기(경영지원팀)
+		public async Task<T1Account?> FindId(string p_code) 
         {
             var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == p_code.Trim());
             return user;
         }
-
-        public async Task<IEnumerable<T1InBound>> InBoundList() // 입고내역
+		// 입고내역
+		public async Task<IEnumerable<T1InBound>> InBoundList() 
         {
             var s = await db.T1InBounds.ToListAsync();
             return s;
         }
-
-        public async Task<T1Account?> Login(string userid, string userpw) //로그인
+		//로그인
+		public async Task<T1Account?> Login(string userid, string userpw) 
         {
             var user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == userid.Trim() && x.PassWord == userpw);
             if(user == null) return null;
             return user;
         }
-
-        public async Task<IEnumerable<T1OutBound>> OutBoundList() // 출고내역
+		// 출고내역
+		public async Task<IEnumerable<T1OutBound>> OutBoundList() 
         {
             var s = await db.T1OutBounds.ToListAsync();
             return s;
         }
-
-        public async Task<T1Account> ResetPw(string p_code) // 비밀번호 초기화(경영지원부)
+		// 비밀번호 초기화(경영지원부)
+		public async Task<T1Account> ResetPw(string p_code) 
         {
             T1Account user = await db.T1Accounts.FirstOrDefaultAsync(x => x.UserId == p_code.Trim());
             if (p_code == null) return null;
             user.PassWord = "0000";
+            await db.SaveChangesAsync();
             return user;
         }
-
-        public async Task<IEnumerable<T1WareHouse>> Total_List() // 창고 총 현황
+		// 창고 총 현황
+		public async Task<IEnumerable<T1WareHouse>> Total_List() 
         {
             var s = await db.T1WareHouses.ToListAsync();
             return s;
         }
-
-        public async Task<T1Account> Update(string p_code, string p_department) // 사원정보수정 (경영지원팀)
+		// 사원정보수정 (경영지원팀)
+		public async Task<T1Account> Update(string p_code, string p_department) 
         {
             T1Account user = await db.T1Accounts.FirstOrDefaultAsync(x=>x.UserId == p_code.Trim());
             if (user == null) return null;
@@ -88,8 +92,8 @@ namespace Web_Final.Repositories
             await db.SaveChangesAsync();
             return user;
         }
-
-        public async Task<T1Account> UpdatePw(int? uid,string pw) // 비밀번호 수정(사원이 직접)
+		// 비밀번호 수정(사원이 직접)
+		public async Task<T1Account> UpdatePw(int? uid,string pw) 
         {
 
             T1Account user = await db.T1Accounts.FirstOrDefaultAsync(x => x.Id == uid);
@@ -99,12 +103,23 @@ namespace Web_Final.Repositories
             return user;
         }
 
-        public async Task<IEnumerable<T1Account>> List() //총사원 현황
+		//총사원 현황
+		public async Task<IEnumerable<T1Account>> List() 
         {
             var employees = await db.T1Accounts.ToListAsync();
             return employees;
         }
 
+       //생산현황
+       public async Task<IEnumerable<T1Item>> ChartList()
+        {
+            var list = await db.T1Items.ToListAsync();
+            return list;
+        }
 
-	}
+        Task<T1Item?> IFactoryRepository.ChartList()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

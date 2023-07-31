@@ -1,13 +1,16 @@
 ﻿@*부서코드 001:경영지원, 002:구매팀, 003:생산팀*@
+
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @{
     //세션에서 가져올 값 : 이름,부서코드(departmentCode),권한,uid
     string? name = HttpContextAccessor.HttpContext.Session.GetString("username"); //이름
     string? departmentCode = HttpContextAccessor.HttpContext.Session.GetString("department"); //부서
 }
+
+
 @if(departmentCode == "001")
 {
-    <h1>경영•지원팀<br> @(name)님 안녕하세요!!</h1>
+    <h1>경영,지원팀<br> @(name)님 안녕하세요!!</h1>
 }
 else if(departmentCode == "002")
 {
@@ -21,3 +24,4 @@ else if(departmentCode == "003")
 else{
     <h1>잘못된 접근 입니다!!</h1>
 }
+    

@@ -1,0 +1,19 @@
+﻿@model Web_Final.Models.Account.T1Account
+@*
+    로그인
+*@
+
+@if (Model == null)
+{
+    <script>
+        alert("회원정보가 일치하지 않거나 존재하지 않는 ID입니다.");
+        location.href = history.back();
+    </script>
+}
+else{
+    <script>
+        alert("로그인 되었습니다.");
+        location.href = "index";
+    </script>
+
+}

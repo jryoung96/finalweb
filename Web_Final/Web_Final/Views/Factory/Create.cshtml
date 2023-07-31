@@ -4,38 +4,41 @@
 @{
 }
 
-<form method="post" action="/Factory/Create">
+<form method="post" action="/Factory/Create" id="create">
 
 <div style="width:760px;height:900px; margin-right:auto; margin-left:auto; padding-top:160px;">
 <h2 style="text-align:center">계정 생성</h2>
 <br />
 	<p>사원명 :</p>
-	<input type="text" class="form-control" name="p_name" /> <br />
+	<input type="text" class="form-control" name="p_name" placeholder="Name" id="name"/> <br />
 	<p>부서명 :</p>
-	<select name="p_department" class="form-control">
+	<select name="p_department" class="form-control" id="dept">
+
+		<option value="none">부서를 선택하세요</option>
 		<option value="001">경영지원팀</option>
 		<option value="002">구매팀</option>
 		<option value="003">생산팀</option>
 	</select>
 	<br />
 	<p>직급 :</p>
-	<select name="p_position" class="form-control">
+	<select name="p_position" class="form-control" id="position">
+			<option value="none">직급을 선택하세요</option>
 			<option value="인턴">인턴</option>
+			<option value="사원">사원</option>
 			<option value="대리">대리</option>
 			<option value="과장">과장</option>
 			<option value="부장">부장</option>
-			<option value="차장">차장</option>
 			<option value="사장">사장</option>
 	</select>
 	<p>아이디 :</p>
-	<input type="text" class="form-control" name="p_id" />
+	<input type="text" class="form-control" name="p_id" placeholder="ID" id="userid" />
 	<br />
 	<p>비밀번호 :</p>
-	<input type="password" class="form-control" name="p_pw" />
+	<input type="password" class="form-control" name="p_pw" placeholder="Password" id="pw" />
 <br />
 		<div style="margin-right:auto; margin-left:auto;">
-	 <button class="btn-primary btn-block" style="height:50px;" >등록하기</button>
+	 <button type="button" id="btn_create" class="btn-primary btn-block" style="height:50px;" >등록하기</button>
 </div>
 </div>
-
 </form>
+	<script src="~/js/script.js"></script>

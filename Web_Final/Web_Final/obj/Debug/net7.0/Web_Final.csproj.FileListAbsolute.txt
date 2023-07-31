@@ -190,3 +190,4 @@ C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_
 C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.pdb
 C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\Web_Final.genruntimeconfig.cache
 C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_Final\Web_Final\obj\Debug\net7.0\ref\Web_Final.dll
+C:\Users\82107\OneDrive\바탕 화면\final\Ifactory_web\jryoung96\finalweb\Web_Final\Web_Final\bin\Debug\net7.0\Newtonsoft.Json.dll

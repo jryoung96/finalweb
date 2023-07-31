@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QSVZYi5JwnAtpPDq4jcn9DmDH+LIDONljHsjj0AjU9E=",
+  "Hash": "rFhggagIOT1Lp19B4u6oTpdssWnPEyFstXLDmdMHYKI=",
   "Source": "Web_Final",
   "BasePath": "_content/Web_Final",
   "Mode": "Default",
@@ -7512,6 +7512,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\create.js",
+      "SourceId": "Web_Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\",
+      "BasePath": "_content/Web_Final",
+      "RelativePath": "js/create.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\create.js"
+    },
+    {
+      "Identity": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\login.js",
+      "SourceId": "Web_Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\",
+      "BasePath": "_content/Web_Final",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
       "Identity": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\script.js",

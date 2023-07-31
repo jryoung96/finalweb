@@ -30,9 +30,6 @@ pk(출고번호) 부품명 수량 담당자 출고날짜
 								@*출고날짜*@		<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 25.7344px;">Date</th>
 								</thead>
 								<tbody>
-
-
-
 									@foreach (var data in Model)
 									{
 										<tr role="row" class="@(row_count % 2 == 1 ? "odd" : "even")">
@@ -42,13 +39,8 @@ pk(출고번호) 부품명 수량 담당자 출고날짜
 											<td class="sorting_1">@(data.Contact)</td> @*담당자*@
 											<td class="sorting_1">@(data.RegDate)</td> @*출고 날짜*@
 										</tr>
-
 										row_count++;
 									}
-
-
-
-
 								</tbody>
 							</table>
 						</div>

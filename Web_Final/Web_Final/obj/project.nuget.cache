@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5+k++6gEKOvyB4uQQucHQBtnw9azp7IVjfF2A5F7xioB7KkxQVQmdH2luDXflFJk9ZFSdyd1lsPI6ILEw0rBFA==",
+  "dgSpecHash": "DWRch2Hij4bq13WM++FavhWDHbBP/R5dViVmr5nA8iZ6eqNbzwxfl+uzgn37oh7WRCXzwF4Uk5FNoJNv0qQGvA==",
   "success": true,
   "projectFilePath": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\Web_Final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\82107\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\82107\\.nuget\\packages\\chart.js\\3.7.1\\chart.js.3.7.1.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -42,6 +43,7 @@
     "C:\\Users\\82107\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\82107\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\82107\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

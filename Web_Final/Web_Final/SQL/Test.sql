@@ -99,7 +99,17 @@ Values
 ,('L_Test03','50',GETDATE(),1,'Create','P_Test03','C_003','김건우',GETDATE())
 ,('L_Test04','50',GETDATE(),1,'Create','P_Test04','C_004','김건우',GETDATE())
 
+
+--입고내역
+
+--출고내역
 select * from T1_InBound;
 select * from T1_OutBound;
 select * from T1_WareHouse;
 select * from T1_Acount;
+select * from T1_Item;
+select * from T1_InBound;
+select * from T1_OutBound;
+select * from T1_MProcess;
+
+select * from T1_Acount where name like '%테스트%'
