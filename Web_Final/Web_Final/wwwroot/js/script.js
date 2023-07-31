@@ -1,4 +1,19 @@
-﻿
+﻿//로그인
+$("#btn_login").on("click", function () {
+    var id = $("#username");
+    var pw = $("#pw");
+    if (id == null || $.trim(id.val()) == "") {
+        alert("아이디를 입력하세요!");
+        id.focus();
+        return false;
+    }
+    else if (pw == null || pw.val() == "") {
+        alert("비밀번호를 입력하세요!");
+        pw.focus();
+        return false;
+    }
+    $("#login").submit();
+})
 //계정생성버튼 클릭
 $("#btn_create").on("click", function () {
     var name = $("#name");
@@ -6,6 +21,7 @@ $("#btn_create").on("click", function () {
     var position = $("#position");
     var id = $("#userid");
     var pw = $("#pw");
+    var pw2 = $("#pw2");
     if (name.val() == null || $.trim(name.val()) == "") {
         alert("이름을 입력해 주세요!");
         name.focus();
@@ -29,6 +45,11 @@ $("#btn_create").on("click", function () {
     else if (pw.val() == null || $.trim(pw.val()) == "") {
         alert("비밀번호를 입력하세요!");
         pw.focus();
+        return false;
+    }
+    else if (pw.val() != pw2.val()) {
+        alert("비밀번호가 일치하지 않습니다.");
+        pw2.focus();
         return false;
     }
     else {

@@ -113,3 +113,6 @@ select * from T1_OutBound;
 select * from T1_MProcess;
 
 select * from T1_Acount where name like '%테스트%'
+
+ALTER TABLE [LTDB].[dbo].[T1_Acount]
+ADD DEFAULT (1) FOR [Authority]

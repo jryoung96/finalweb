@@ -26,7 +26,7 @@ namespace Web_Final.Repositories
                 UserId = p_id,
                 PassWord = p_pw,
                 Position = p_position,
-                Authority = 0,
+                Authority = 1,
                 RegDate = DateTime.Now,
                 DepartmentCode = p_department
             };
@@ -121,5 +121,7 @@ namespace Web_Final.Repositories
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

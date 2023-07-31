@@ -146,7 +146,7 @@ namespace Web_Final.Controllers
 			    var list = await factoryRepository.List(); //사원목록
 			    return View(list);
 		    }
-		//창고자재 목록 (구매팀)
+		//창고자재 목록 (구매팀,생산팀)
 		public async Task<IActionResult> StockList()
         {
             var list = await factoryRepository.Total_List();
@@ -158,7 +158,7 @@ namespace Web_Final.Controllers
             var list = await factoryRepository.InBoundList();
             return View(list);
         }
-        //불출내역 (구매팀 >> 생산팀)
+        //출고내역 (구매팀)
         public async Task<IActionResult> OutBoundList()
         {
 			var list = await factoryRepository.OutBoundList();

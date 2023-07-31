@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\Web_Final.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\Account\\AddUser.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Account\\AddUser.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\Account\\DeleteUser.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Account\\DeleteUser.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\Account\\ResetUser.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Account\\ResetUser.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\Account\\UpdateUser.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Account\\UpdateUser.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\Account\\UserList.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Account\\UserList.png"
+    },
+    {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\User.png",
       "PackagePath": "staticwebassets\\assets\\images\\User.png"
     },
@@ -1761,8 +1781,8 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\create.js",
-      "PackagePath": "staticwebassets\\js\\create.js"
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\input_check.js",
+      "PackagePath": "staticwebassets\\js\\input_check.js"
     },
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\login.js",

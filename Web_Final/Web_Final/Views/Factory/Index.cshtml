@@ -6,11 +6,76 @@
     string? name = HttpContextAccessor.HttpContext.Session.GetString("username"); //이름
     string? departmentCode = HttpContextAccessor.HttpContext.Session.GetString("department"); //부서
 }
+<style>
+    
+    h1 {
+        text-align: center;
+    }
+
+    .menubox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        align-content: center;
+    }
+
+    .menubox #selectbox:hover {
+        background-color: bisque;
+    }
+
+    .menubox #selectbox {
+        flex: 1;
+        width: 250px;
+        height: 250px;
+        align-content: center;
+        margin: 5px;
+    }
+</style>
+
 
 
 @if(departmentCode == "001")
 {
-    <h1>경영,지원팀<br> @(name)님 안녕하세요!!</h1>
+    <h1>경영 지원팀<br> @(name)님 안녕하세요!!</h1>
+
+    <div class="menubox">
+        <div id="selectbox">
+        <a href="create">
+            <img src="~/assets/images/Account/Adduser.png">
+        </a>
+        </div>
+
+        <div id="selectbox">
+        <a href="updateEmp">
+            <img src="~/assets/images/Account/UpdateUser.png">
+        </a>
+        </div>
+
+        <div id="selectbox">
+        <a href="deleteEmp">
+            <img src="~/assets/images/Account/DeleteUser.png">
+        </a>
+        </div>
+
+        <div id="selectbox">
+        <a href="EmployeesList">
+            <img src="~/assets/images/Account/UserList.png">
+        </a>
+        </div>
+
+        <div id="selectbox">
+        <a href="Reset">
+            <img src="~/assets/images/Account/ResetUser.png">
+        </a>
+        </div>
+
+    </div>
 }
 else if(departmentCode == "002")
 {
