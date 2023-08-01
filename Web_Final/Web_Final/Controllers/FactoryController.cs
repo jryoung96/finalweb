@@ -104,9 +104,9 @@ namespace Web_Final.Controllers
         public async Task<IActionResult> Check(string p_code) //실제 유저가 사용하는 id값을 입력받아야 돼
         {
             var user = await factoryRepository.FindId(p_code);
-            if (user == null) return Json("unavailable");
+            if (user == null) return Json("none");
             else 
-                return Json("available");
+                return Json("exist");
         }
         
        
