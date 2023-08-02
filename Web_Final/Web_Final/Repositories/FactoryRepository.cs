@@ -130,7 +130,7 @@ namespace Web_Final.Repositories
                     Name = h.Key.Name,
                     Code = h.Key.Code,
                     RegDate = h.Key.RegDate,
-                    Count = h.Sum(x=>x.lot_his.Amount1)
+                    Count = h.Sum(x=>x.c_lot.Amount1)
                 }).OrderBy(x=>x.Id)
                 .ToListAsync();
             return result;
