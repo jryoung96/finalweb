@@ -164,12 +164,16 @@ namespace Web_Final.Controllers
 
 			return View(list);
         }
-        //차트 (생산)
-        //public async Task<IActionResult> Total_Chart()
-        //{
-        //    var list = await factoryRepository.ChartList();
-        //    return View(list);
-        //}
+        //차트 (테이블)
+        public async Task<IActionResult> Total_Chart()
+        {
+            var res = await factoryRepository.GetCountAsync();
+            return View(res);
+        }
+        public async Task<IActionResult> CountJson()
+        {
+            return Json(await factoryRepository.GetCountAsync());
+        }
 
     }
 }

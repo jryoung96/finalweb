@@ -18,7 +18,7 @@ namespace Web_Final.Repositories
         private readonly MProcessDbcontext process_db;
         public FactoryRepository(AccountDbContext db1, MProcessDbcontext db2 )
         {
-            account_db = db1; ;
+            account_db = db1; 
             process_db = db2;
         }
        //계정생성
@@ -116,28 +116,52 @@ namespace Web_Final.Repositories
 
 
         //생산현황 (차트에서 끄집어 쓸거)
-        public async Task<IEnumerable<ItemCount>> GetCount()
+        public async Task<IEnumerable<ItemCount>> GetCountAsync()
         {
             var result = await process_db.Items
-                .Join(process_db.LotHis,
+                .Join(process_db.CreateLots,
                 item => item.Code,
-                his => his.ItemCode,
-                (item, stock) => new { item, stock })
-                .GroupBy(x => new { x.item.Name, x.item.Code })
+                c_lot => c_lot.ItemCode,
+                (item, lot_his) => new { item, lot_his })
+                .Where(x=>x.item.Type == "FERT")
+                .GroupBy(x => new { x.item.Name, x.item.Code, x.lot_his.RegDate })
                 .Select(h => new ItemCount
                 {
                     Name = h.Key.Name,
                     Code = h.Key.Code,
-                    RegDate = DateTime.Now,
-                    Count = h.Sum(x=>x.stock.Amount1)
-                })
+                    RegDate = h.Key.RegDate,
+                    Count = h.Sum(x=>x.lot_his.Amount1)
+                }).OrderBy(x=>x.Id)
                 .ToListAsync();
             return result;
         }
 
+		/*
+					 var result = await process_db.Items
+				 .Join(process_db.CreateLots,
+					 item => item.Code,
+					 c_lot => c_lot.ItemCode,
+					 (item, c_lot) => new { item, c_lot })
+				 .Join(process_db.LotHis,
+					 combined => combined.c_lot.ItemCode,
+					 lot_his => lot_his.ItemCode,
+					 (combined, lot_his) => new { combined.item, combined.c_lot, lot_his })
+				 .Where(x => x.item.Type == "FERT" && x.lot_his.ActionCode == "End")
+				 .GroupBy(x => new { x.item.Name, x.item.Code, x.lot_his.RegDate })
+				 .Select(h => new ItemCount
+				 {
+					 Name = h.Key.Name,
+					 Code = h.Key.Code,
+					 RegDate = h.Key.RegDate,
+					 Count = h.Sum(x => x.c_lot.Amount1)
+				 }).OrderBy(x=>x.Id)
+				 .ToListAsync();
 
-                
+			 return result;
+		 */
 
 
-    }
+
+
+	}
 }

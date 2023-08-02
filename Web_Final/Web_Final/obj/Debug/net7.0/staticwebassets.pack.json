@@ -1781,20 +1781,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\chart.js",
+      "PackagePath": "staticwebassets\\js\\chart.js"
+    },
+    {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\input_check.js",
       "PackagePath": "staticwebassets\\js\\input_check.js"
     },
     {
-      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\login.js",
-      "PackagePath": "staticwebassets\\js\\login.js"
-    },
-    {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
-    },
-    {
-      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\lib\\bootstrap\\LICENSE",

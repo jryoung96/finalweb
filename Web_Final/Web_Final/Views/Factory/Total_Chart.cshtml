@@ -1,4 +1,4 @@
-﻿@model List<Web_Final.Models.Process.Item>
+﻿@model List<Web_Final.Models.Process.ItemCount>
 @*
    차트 : 생산
 *@
@@ -21,11 +21,10 @@
                 <tr>
                     <td>@item.Name</td>
                     <td>@item.RegDate</td>
-                    <td>수량</td>x
+                    <td>@item.Count</td>
                 </tr>
                 }
                     
-            }
         </tbody>
     </table>
     @*chart가 그려질 canvas*@
@@ -35,61 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </div>
 
-<script>
-    const ctx = document.getElementById('chart');
-    let chart;
-    let labels;
-    let data;
-    window.onload = function () { //페이지 로딩이 끝날 시점
-        fetch("/Factory/CountJson")
-            .then(response => response.json())
-            .then((countObj) => {
-                labels = countObj.map(o => o.name);
-                data = countObj.map(o => o.count);
-                createChart(labels, data);
-
-                //1초마다 차트 업데이트
-                setInterval(updateChart, 1000)
-            })
-        //createChart();
-    };
-
-    const createChart = function (labels, data) {
-        // Chart는 chart.js에서 자체 제공 각 변수는 (첫번ㅉ)
-        chart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                //labels: ['재걸','혁주','건우','용학','택수','동후','건종'],
-                labels: labels,
-                datasets: [{
-                    label: 'Stock Count',
-                    //data:[56,43,20,70,80,100,66],
-                    data: data,
-                    borderWidth: 1
-                },],
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                    }
-                }
-            }
-        });
-    }
-    const updateChart = function () {
-        fetch("/Home/CountJson")
-            .then(response => response.json())
-            .then((countObj) => {
-                labels = countObj.map(o => o.name);
-                data = countObj.map(o => o.count);
-                chart.data.labels = labels;
-                chart.data.datasets[0].data = data;
-                chart.update();// 무조건 update를 해야 반영된다
-            }
-            )
-    }
-</script>
+<script src="~/js/chart.js"></script>
 
 
 

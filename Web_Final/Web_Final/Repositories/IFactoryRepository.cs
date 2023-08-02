@@ -19,8 +19,8 @@ namespace Web_Final.Repositories
         Task<IEnumerable<OutBound>> OutBoundList();  //불출내역 (창고에서 부품 몇개나 썼나), 생산팀만 확인가능
         Task<IEnumerable<WareHouse>> Total_List(); //재고 현황 (창고), 생산팀만 확인가능
         Task<IEnumerable<Account>> List(); // 사원목록 
-        Task<Account?> FindId(string p_code); //사원번호 입력해서 찾기
-        Task<IEnumerable<ItemCount>> GetCount(); // 완제품 갯수 count
+        Task<Account?> FindId(string p_code); //사원ID 찾기
+        Task<IEnumerable<ItemCount>> GetCountAsync(); // 완제품 갯수 count
         
 
     }
