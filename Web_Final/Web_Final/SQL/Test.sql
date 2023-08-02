@@ -9,13 +9,13 @@ values
 -- 1 : 경영지원, 2: 구매, 3: 생산 
 delete from T1_Acount;
 
-insert into [LTDB].[dbo].[T1_Acount] (UserId,Name,Position,Authority,PassWord,RegDate,DepartmentCode)
+insert into [LTDB].[dbo].[T1_Account] (UserId,Name,Position,Authority,PassWord,RegDate,DepartmentCode)
 values
 ('admin1','김건우','팀장',0,'1234',GETDATE(),'001')
 ,('admin2','박재걸','팀장',0,'1234',GETDATE(),'002')
 ,('admin3','이용학','팀장',0,'1234',GETDATE(),'003')
 
-SELECT * FROM T1_Acount;
+SELECT * FROM T1_Account;
 --WareHouse--
 delete from T1_WareHouse;
 
@@ -92,12 +92,15 @@ Values
 
 --Create Lot--
 delete from T1_CreateLot;
-insert into [LTDB].[dbo].[T1_CreateLot] (Code,Amount,ActionTime,HisNum,ActionCode,ProcessCode,ItemCode,Constructor,RegDate)
-Values
-('L_Test01','50',GETDATE(),1,'Create','P_Test01','C_001','김건우',GETDATE())
-,('L_Test02','50',GETDATE(),1,'Create','P_Test02','C_002','김건우',GETDATE())
-,('L_Test03','50',GETDATE(),1,'Create','P_Test03','C_003','김건우',GETDATE())
-,('L_Test04','50',GETDATE(),1,'Create','P_Test04','C_004','김건우',GETDATE())
+INSERT INTO [LTDB].[dbo].[T1_CreateLot] (
+    [Code], [Amount1], [Amount2], [StockUnit1], [StockUnit2], [ActionTime], [ActionCode],
+    [HisNum], [ProcessCode], [ItemCode], [Constructor], [RegDate], [Modifier], [ModDate], [ItemId], [ProcessId]
+)
+VALUES
+    ('L_Test01', '50', '1', '상품1','대',GETDATE(), 1, 'Create', 'P_Test01', 'C_001', '김건우', GETDATE()),
+    ('L_Test02', '50', '2', '상품1','대',GETDATE(), 1, 'Create', 'P_Test02', 'C_002', '김건우', GETDATE()),
+    ('L_Test03', '50', '3', '상품2','대',GETDATE(), 1, 'Create', 'P_Test03', 'C_003', '김건우', GETDATE()),
+    ('L_Test04', '50', '4', '상품2','대',GETDATE(), 1, 'Create', 'P_Test04', 'C_004', '김건우', GETDATE());
 
 
 --입고내역
@@ -106,7 +109,7 @@ Values
 select * from T1_InBound;
 select * from T1_OutBound;
 select * from T1_WareHouse;
-select * from T1_Acount;
+select * from T1_Account;
 select * from T1_Item;
 select * from T1_InBound;
 select * from T1_OutBound;
@@ -114,5 +117,27 @@ select * from T1_MProcess;
 
 select * from T1_Acount where name like '%테스트%'
 
+select * from T1_LotHis
+select * from T1_Item;
+
 ALTER TABLE [LTDB].[dbo].[T1_Acount]
 ADD DEFAULT (1) FOR [Authority]
+
+insert into T1_LotHis(Code,Amount1,Amount2,ActionTime,ActionCode,HisNum,ProcessCode,ItemCode,Constructor,RegDate)
+values('LT_C001',
+
+
+--drop
+drop table T1_Account;
+drop table T1_Department
+drop table T1_EquipHis;
+drop table T1_Equipment;
+drop table T1_InBound;
+drop table T1_OutBound;
+drop table T1_LotHis;
+drop table T1_WareHouse;
+drop table T1_CreateLot
+drop table T1_Item
+drop table T1_MProcess;
+drop table T1_Factory;
+

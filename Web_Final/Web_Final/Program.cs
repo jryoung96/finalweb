@@ -19,10 +19,17 @@ namespace Web_Final
             builder.Services.AddHttpContextAccessor();
 
             // DbContext 주입
-            builder.Services.AddDbContext<StockDbContext>(options =>
+            builder.Services.AddDbContext<AccountDbContext>(options =>
                 options.UseSqlServer(
                         builder.Configuration.GetConnectionString("DbConnectionString")
                     ));
+
+            builder.Services.AddDbContext<MProcessDbcontext>(options =>
+    options.UseSqlServer(
+            builder.Configuration.GetConnectionString("DbConnectionString")
+        ));
+
+
             // Service 에 injection 추가
             builder.Services.AddScoped<IFactoryRepository, FactoryRepository>();
 

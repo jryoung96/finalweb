@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Collections;
-using Web_Final.Data;
-using Web_Final.Models.Account;
 using Web_Final.Repositories;
+using Web_Final.Models;
 
 namespace Web_Final.Controllers
 {
@@ -166,11 +165,11 @@ namespace Web_Final.Controllers
 			return View(list);
         }
         //차트 (생산)
-        public async Task<IActionResult> Total_Chart()
-        {
-            var list = await factoryRepository.ChartList();
-            return View(list);
-        }
+        //public async Task<IActionResult> Total_Chart()
+        //{
+        //    var list = await factoryRepository.ChartList();
+        //    return View(list);
+        //}
 
     }
 }
