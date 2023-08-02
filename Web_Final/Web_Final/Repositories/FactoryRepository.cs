@@ -122,9 +122,9 @@ namespace Web_Final.Repositories
                 .Join(process_db.CreateLots,
                 item => item.Code,
                 c_lot => c_lot.ItemCode,
-                (item, lot_his) => new { item, lot_his })
+                (item, c_lot) => new { item, c_lot })
                 .Where(x=>x.item.Type == "FERT")
-                .GroupBy(x => new { x.item.Name, x.item.Code, x.lot_his.RegDate })
+                .GroupBy(x => new { x.item.Name, x.item.Code, x.c_lot.RegDate })
                 .Select(h => new ItemCount
                 {
                     Name = h.Key.Name,
