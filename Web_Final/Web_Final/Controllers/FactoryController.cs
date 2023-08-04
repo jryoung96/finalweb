@@ -164,6 +164,13 @@ namespace Web_Final.Controllers
 
 			return View(list);
         }
+
+        public async Task<IActionResult> OutBoundList2()
+        {
+            var list = await factoryRepository.OutBoundList();
+
+            return View(list);
+        }
         //차트 (테이블)
         public async Task<IActionResult> Total_Chart()
         {

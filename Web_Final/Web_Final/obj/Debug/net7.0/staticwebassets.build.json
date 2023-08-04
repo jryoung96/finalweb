@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZobNx3o933u/LzzmovbJw+llFiijSRCCn47nO7Kqetk=",
+  "Hash": "XIyHUDAaKWKsRguKdXppgUOjzOaTw/Sa4pskzFWj8HA=",
   "Source": "Web_Final",
   "BasePath": "_content/Web_Final",
   "Mode": "Default",
@@ -304,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\card-img-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\Chart.png",
+      "SourceId": "Web_Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\",
+      "BasePath": "_content/Web_Final",
+      "RelativePath": "assets/images/Chart.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\Chart.png"
     },
     {
       "Identity": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\down-arrow.png",
