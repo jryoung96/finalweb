@@ -165,7 +165,7 @@ namespace Web_Final.Controllers
 			return View(list);
         }
 
-        public async Task<IActionResult> OutBoundList2()
+        public async Task<IActionResult> InBoundList2()
         {
             var list = await factoryRepository.OutBoundList();
 
