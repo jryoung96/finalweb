@@ -3,11 +3,30 @@
 *@
 @{
 }
-<form method="post" action="/Factory/DeleteEmp" id="delete">
-    <label for="code" style="display: flex; align-items: center;">사원코드 :</label>
-    <input type="text" id="code" name="p_code" class="form-control" placeholder="사원ID 입력" style="margin-bottom: 0;" />
-    <br />
-    
-    <button  type="button" class="btn btn-danger" id="btn_delete">삭제하기</button>
-</form>
+<link rel="stylesheet" type="text/css" href="~/css/manage.css" />
+
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="section-block" id="basicform">
+                <h3 class="section-title">ID삭제</h3>
+                <p>사원의 아이디를 삭제 합니다</p>
+            </div>
+            <div class="card">
+                <h5 class="card-header">Delete</h5>
+                <div class="card-body">
+                    <form method="post" action="/Factory/DeleteEmp" id="delete">
+                        <input type="text" id="code" name="p_code" class="form-control" placeholder="사원ID 입력" style="margin-bottom: 0;" />
+                        <br />
+
+                        <button type="button" class="btn btn-danger" id="btn_delete">삭제하기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="~/js/script.js"></script>

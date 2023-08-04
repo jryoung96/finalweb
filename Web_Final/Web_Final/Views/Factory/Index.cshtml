@@ -6,72 +6,47 @@
     string? name = HttpContextAccessor.HttpContext.Session.GetString("username"); //이름
     string? departmentCode = HttpContextAccessor.HttpContext.Session.GetString("department"); //부서
 }
-<style>
-    
-    h1 {
-        text-align: center;
-    }
 
-    .menubox {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    img {
-        width: 250px;
-        height: 250px;
-        align-content: center;
-    }
-
-    .menubox #selectbox:hover {
-        background-color: bisque;
-    }
-
-    .menubox #selectbox {
-        flex: 1;
-        width: 250px;
-        height: 250px;
-        align-content: center;
-        margin: 5px;
-    }
-</style>
-
+<link rel="stylesheet" type="text/css" href="~/css/index.css" />
 
 
 @if(departmentCode == "001")
 {
     <h1>경영 지원팀<br> @(name)님 안녕하세요!!</h1>
-
-    <div class="menubox">
-        <div id="selectbox">
-        <a href="create">
+    <hr />
+    <div class="menubox" style="margin-top:200px;">
+        <div id="selectbox" class="top">
+        <a href="create" class="img-box">
             <img src="~/assets/images/Account/Adduser.png">
+            <h3 class="menu">사원추가</h3>
         </a>
         </div>
 
-        <div id="selectbox">
-        <a href="updateEmp">
+        <div id="selectbox" class="top">
+            <a href="updateEmp" class="img-box">
             <img src="~/assets/images/Account/UpdateUser.png">
+                <h3 class="menu">부서이동</h3>
         </a>
         </div>
 
-        <div id="selectbox">
-        <a href="deleteEmp">
+        <div id="selectbox" class="top">
+            <a href="deleteEmp" class="img-box">
             <img src="~/assets/images/Account/DeleteUser.png">
+                <h3 class="menu">사원 삭제</h3>
         </a>
         </div>
 
-        <div id="selectbox">
-        <a href="EmployeesList">
+        <div id="selectbox" class="bottom">
+            <a href="EmployeesList" class="img-box">
             <img src="~/assets/images/Account/UserList.png">
+                <h3 class="menu">사원목록</h3>
         </a>
         </div>
 
-        <div id="selectbox">
-        <a href="Reset">
+        <div id="selectbox" class="bottom">
+            <a href="Reset" class="img-box">
             <img src="~/assets/images/Account/ResetUser.png">
+                <h3 class="menu">비밀번호 초기화</h3>
         </a>
         </div>
 
@@ -80,11 +55,61 @@
 else if(departmentCode == "002")
 {
     <h1>구매팀<br> @(name)님 안녕하세요!!</h1>
+    <hr />
+    <div class="menubox" style="margin-top:200px;">
+        <div id="selectbox" class="top">
+            <a href="stockList" class="img-box">
+                <img src="~/assets/images/stock_list.png">
+                <h3 class="menu">재고조회</h3>
+            </a>
+        </div>
+
+        <div id="selectbox" class="top">
+            <a href="inboundList" class="img-box">
+                <img src="~/assets/images/inbound_list.png">
+                <h3 class="menu">입고내역</h3>
+            </a>
+        </div>
+
+        <div id="selectbox" class="top">
+            <a href="outBoundList" class="img-box">
+                <img src="~/assets/images/outbound_list.png">
+                <h3 class="menu">출고내역</h3>
+            </a>
+        </div>
+
+
+    </div>
 }
 
 else if(departmentCode == "003")
 {
     <h1>생산팀<br> @(name)님 안녕하세요!!</h1>
+    <hr />
+    <div class="menubox" style="margin-top:200px;">
+        <div id="selectbox" class="top">
+            <a href="stockList" class="img-box">
+                <img src="~/assets/images/stock_list.png">
+                <h3 class="menu">재고조회</h3>
+            </a>
+        </div>
+
+        <div id="selectbox" class="top">
+            <a href="inboundList" class="img-box">
+                <img src="~/assets/images/inbound_list.png">
+                <h3 class="menu">입고내역</h3>
+            </a>
+        </div>
+
+        <div id="selectbox" class="top">
+            <a href="Total_Chart" class="img-box">
+                <img src="~/assets/images/Chart.png">
+                <h3 class="menu">완제품 생산현황</h3>
+            </a>
+        </div>
+
+
+    </div>
 }   
 else{
     <h1>잘못된 접근 입니다!!</h1>

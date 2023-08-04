@@ -4,14 +4,37 @@
 *@
 @{
 }
-<h2>비밀번호 수정</h2>
-<form method="post" action="/Factory/UpdatePw">
-	<div>
-		<p>비밀번호 :</p>
-		<input type="password" class="form-control" name="pw" />
-		<p>비밀번호 확인 :</p>
-		<input type="password" class="form-control" />
-		</div>
-		<br>
-		<button type="button" class="btn btn-primary" id="btn_edit">수정하기</button>
-</form>
+<link rel="stylesheet" type="text/css" href="~/css/manage.css" />
+<h2>비밀번호 변경</h2>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="section-block" id="basicform">
+                <h3 class="section-title">비밀번호 변경</h3>
+                <p>사원의 비밀번호를 변경합니다.</p>
+            </div>
+            <div class="card">
+                <h5 class="card-header">Update</h5>
+                <div class="card-body">
+                    <form method="post" action="/Factory/UpdatePw" id="update_pw">
+                        <div>
+                            <input type="password" class="form-control" id="pw" name="pw" placeholder="비밀번호 입력" style="margin-bottom:10px;" />
+                            <div id="msg-pw">
+                                @*안내메시지*@
+                            </div>
+                            <input type="password" class="form-control" id="pw2" placeholder="비밀번호 확인" />
+                            <div id="msg-pw2">
+                                @*안내메시지*@
+                            </div>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-primary" id="btn_edit">수정하기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/input_check.js"></script>
+<script src="~/js/script.js"></script>

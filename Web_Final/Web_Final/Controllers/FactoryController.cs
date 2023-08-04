@@ -33,7 +33,7 @@ namespace Web_Final.Controllers
         }
         [HttpPost]
         [ActionName("Login")]
-        public async Task<IActionResult> GoLogin(string userid, string userpw) // 변수명은 form태그안에 input태그 name값과 동일해야 함!!!
+        public async Task<IActionResult> GoLogin(string userid, string userpw) 
         {
             var user = await factoryRepository.Login(userid, userpw);
             if(user != null) 
@@ -122,7 +122,7 @@ namespace Web_Final.Controllers
             return View();
         }
 
-        //사원ID 삭제 페이지
+        //사원ID 삭제 페이지       
         public IActionResult DeleteEmp()
         {
             return View();

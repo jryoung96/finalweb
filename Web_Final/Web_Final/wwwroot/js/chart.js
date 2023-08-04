@@ -17,10 +17,6 @@
     };
 
 const createChart = function (labels, data) {
-    if (chart) {
-        //수량 변경시 기존에 있던 차트를 지우고 새로 생성
-        chart.destroy();
-    }
         // Chart는 chart.js에서 자체 제공 각 변수는 (첫번째)
         chart = new Chart(ctx, {
             type: 'bar',

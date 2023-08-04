@@ -6,13 +6,13 @@
 }
 
 <div class="container-fluid">
-    <h1 class="display-4">날짜별 생산 현황</h1>
+    <h1 class="display-4">완제품 생산 현황</h1>
     <table class="table table-hover">
         <thead class="table-success">
             <tr>
                 <th>제품명</th>
-                <th>생산날짜</th>
-                <th>생산수량</th>
+                <th>제품 코드</th>
+                <th>총 생산수량</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@
             {
                 <tr>
                     <td>@item.Name</td>
-                    <td>@item.RegDate</td>
+                    <td>@item.Code</td>
                     <td>@item.Count</td>
                 </tr>
                 }

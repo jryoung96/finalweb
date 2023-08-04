@@ -109,17 +109,18 @@ VALUES
 select * from T1_InBound;
 select * from T1_OutBound;
 select * from T1_WareHouse;
-select * from T1_Account;
-select * from T1_Item;
+`select * from T1_Item;
 select * from T1_InBound;
 select * from T1_OutBound;
 select * from T1_MProcess;
 
 select * from T1_Acount where name like '%테스트%'
 
+select * from T1_Account;
 select * from T1_LotHis
 select * from T1_Item;
 
+select * from T1_CreateLot;
 ALTER TABLE [LTDB].[dbo].[T1_Acount]
 ADD DEFAULT (1) FOR [Authority]
 
@@ -141,3 +142,4 @@ drop table T1_Item
 drop table T1_MProcess;
 drop table T1_Factory;
 
+select * from T1_WareHouse;

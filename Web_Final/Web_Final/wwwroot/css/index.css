@@ -1,0 +1,56 @@
+﻿
+
+h1 {
+    text-align: center;
+}
+
+.menubox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    align-content: center;
+}
+
+.menubox #selectbox:hover {
+    background-color: rgba(250, 230,0, 0.6);
+}
+
+.menubox #selectbox {
+    flex: 1;
+    width: 250px;
+    height: 250px;
+    align-content: center;
+    margin: 5px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.img-box {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로로 정렬 */
+    align-items: center; /* 가로 가운데 정렬 */
+}
+
+.img-container img {
+    width: 100px;
+    height: 100px;
+}
+
+.img-container h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+

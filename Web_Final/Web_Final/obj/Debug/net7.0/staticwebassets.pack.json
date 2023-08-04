@@ -121,16 +121,36 @@
       "PackagePath": "staticwebassets\\assets\\images\\github.png"
     },
     {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\inbound_list.png",
+      "PackagePath": "staticwebassets\\assets\\images\\inbound_list.png"
+    },
+    {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\loader.svg",
       "PackagePath": "staticwebassets\\assets\\images\\loader.svg"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.jpg"
     },
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\logo.png"
     },
     {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\logo2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\logo3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo3.png"
+    },
+    {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\mail_chimp.png",
       "PackagePath": "staticwebassets\\assets\\images\\mail_chimp.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\outbound_list.png",
+      "PackagePath": "staticwebassets\\assets\\images\\outbound_list.png"
     },
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\product-pic-2.jpg",
@@ -151,6 +171,10 @@
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\slack.png",
       "PackagePath": "staticwebassets\\assets\\images\\slack.png"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\stock_list.png",
+      "PackagePath": "staticwebassets\\assets\\images\\stock_list.png"
     },
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\images\\switch.png",
@@ -1723,6 +1747,14 @@
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\assets\\vendor\\vector-map\\jqvmap.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\vector-map\\jqvmap.css"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\css\\manage.css",
+      "PackagePath": "staticwebassets\\css\\manage.css"
     },
     {
       "Id": "C:\\Users\\82107\\OneDrive\\바탕 화면\\final\\Ifactory_web\\jryoung96\\finalweb\\Web_Final\\Web_Final\\wwwroot\\css\\site.css",

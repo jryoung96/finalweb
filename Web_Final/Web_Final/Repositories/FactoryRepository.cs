@@ -123,15 +123,14 @@ namespace Web_Final.Repositories
                 item => item.Code,
                 c_lot => c_lot.ItemCode,
                 (item, c_lot) => new { item, c_lot })
-                .Where(x=>x.item.Type == "FERT")
-                .GroupBy(x => new { x.item.Name, x.item.Code, x.c_lot.RegDate })
+                .Where(x => x.item.Type == "FERT")
+                .GroupBy(x => new { x.item.Name, x.item.Code})
                 .Select(h => new ItemCount
                 {
                     Name = h.Key.Name,
                     Code = h.Key.Code,
-                    RegDate = h.Key.RegDate,
                     Count = h.Sum(x=>x.c_lot.Amount1)
-                }).OrderBy(x=>x.Id)
+                })
                 .ToListAsync();
             return result;
         }
