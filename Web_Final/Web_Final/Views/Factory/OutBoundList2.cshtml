@@ -28,8 +28,8 @@ pk(출고번호) 부품명 수량 담당자 출고날짜
 										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px; font-weight:bold">이름</th>
 										@*수량*@
 										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 50.9844px; font-weight:bold">수량</th>
-										@*공정상태*@
-										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 97.25px; font-weight:bold">공정상태</th>
+										@*공정명*@
+										<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 97.25px; font-weight:bold">공정명</th>
 										@*출고날짜*@
 										<th class="sorting " tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 25.7344px; font-weight:bold">출고날짜</th>
 								</thead>
@@ -40,7 +40,7 @@ pk(출고번호) 부품명 수량 담당자 출고날짜
 											<td class="sorting_1">@(data.Id)</td> @*pk*@
 											<td class="sorting_1">@(data.Product)</td> @*부품명*@
 											<td class="sorting_1">@(data.Amount)</td> @*수량*@
-											<td class="sorting_1">@(data.MProcessCode)</td> @*공정상태*@
+											<td class="sorting_1">@(data.MProcessCode)</td> @*공정명*@
 											<td class="sorting_1">@(data.RegDate)</td> @*출고 날짜*@
 										</tr>
 										row_count++;
